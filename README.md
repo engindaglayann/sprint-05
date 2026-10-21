@@ -1,4 +1,4 @@
-https://sprint-05-psi.vercel.app/
+https://sprint-05-knzd.vercel.app/
 Canlı Link
 
 Kampüs Etkinlikleri - Sprint 5
