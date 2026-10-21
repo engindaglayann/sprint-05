@@ -1,4 +1,4 @@
-sprint-05-3qc5.vercel.app
+https://sprint-05-3qc5.vercel.app/
 Canlı Link
 
 Kampüs Etkinlikleri - Sprint 5
