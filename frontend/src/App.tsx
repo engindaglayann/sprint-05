@@ -76,7 +76,10 @@ function App() {
         )}
 
         {page === "detail" && selected && (
-          <EventDetail event={selected} onBack={() => go("events")} onEdit={(id) => go("update", id)} />
+          <>
+            <h2>{selected.title}</h2>
+            <EventDetail event={selected} onBack={() => go("events")} onEdit={(id) => go("update", id)} />
+          </>
         )}
 
         {(page === "add" || page === "update") && (
