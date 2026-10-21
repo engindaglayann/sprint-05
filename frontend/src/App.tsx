@@ -31,12 +31,14 @@ function App() {
   const allCategories = [...new Set(events.map(e => e.category))] as Category[];
   const selected = selectedId ? findEventById(events, selectedId) : undefined;
 
+  // Sayfa adına göre dinamik başlık belirleme
   let pageTitle = "Ana Sayfa";
   if (page === "events") pageTitle = "Tüm Etkinlikler";
   if (page === "add") pageTitle = "Etkinlik Ekle";
   if (page === "update") pageTitle = "Etkinlik Güncelle";
   if (page === "detail" && selected) pageTitle = selected.title;
 
+  // Tarayıcı sekmesi başlığını güncelleyen useEffect
   useEffect(() => {
     document.title = `Kampüs Etkinlikleri — ${pageTitle}`;
   }, [pageTitle]);
@@ -88,7 +90,10 @@ function App() {
             <EventForm 
               categories={allCategories} 
               initialData={page === "update" ? selected : undefined} 
-              onSubmit={() => { window.scrollTo(0,0); }} 
+              onSubmit={(_formData) => { 
+                window.scrollTo(0,0);
+                go("events"); 
+              }} 
             />
           </>
         )}
